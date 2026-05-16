@@ -1,0 +1,18 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Rafalli\DpdInfoServicesBundle\Mapper\DpdEventMapper: ~
+
+    Rafalli\DpdInfoServicesBundle\Service\DpdInfoServiceClientInterface: '@Rafalli\DpdInfoServicesBundle\Service\DpdInfoServiceClient'
+
+    Rafalli\DpdInfoServicesBundle\Service\WaybillDeliveryTrackerInterface: '@Rafalli\DpdInfoServicesBundle\Service\WaybillDeliveryTracker'
+
+    Rafalli\DpdInfoServicesBundle\Service\DpdInfoServiceClient:
+        arguments:
+            $wsdlUrl: '%rafalli_dpd_info_services.wsdl_url%'
+            $channel: '%rafalli_dpd_info_services.channel%'
+            $username: '%rafalli_dpd_info_services.username%'
+            $password: '%rafalli_dpd_info_services.password%'
+            $eventMapper: '@Rafalli\DpdInfoServicesBundle\Mapper\DpdEventMapper'

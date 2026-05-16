@@ -1,0 +1,13 @@
+rafalli_dpd_info_services:
+    event:
+        '190101': 'Przesyłka doręczona'
+        '190104': 'Przesyłka doręczona - pobrano kwotę COD'
+        '230403': 'Decyzja o zwrocie paczki krajowej'
+        '230408': 'Przenumerowanie zwracanej paczki zagranicznej'
+        '230402': 'Przekierowanie'
+        '040101': 'Przesyłka odebrana przez Kuriera'
+        'UNKNOWN': 'Nieznany status przesyłki'
+    exception:
+        fetch_error: 'Wystąpił błąd podczas pobierania zdarzeń z API DPD.'
+        waybill_error: 'Nie można sprawdzić historii dla listu przewozowego %waybill%.'
+        confirm_error: 'Błąd podczas potwierdzania sesji %confirmId%.'

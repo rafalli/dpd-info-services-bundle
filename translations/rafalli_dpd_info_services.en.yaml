@@ -1,0 +1,13 @@
+rafalli_dpd_info_services:
+    event:
+        '190101': 'Parcel delivered'
+        '190104': 'Parcel delivered - COD collected'
+        '230403': 'Domestic return parcel decision'
+        '230408': 'Renumbered return parcel'
+        '230402': 'Redirected'
+        '040101': 'Parcel collected by courier'
+        'UNKNOWN': 'Unknown parcel status'
+    exception:
+        fetch_error: 'An error occurred while fetching events from the DPD API.'
+        waybill_error: 'Unable to check history for waybill %waybill%.'
+        confirm_error: 'Error confirming session %confirmId%.'
