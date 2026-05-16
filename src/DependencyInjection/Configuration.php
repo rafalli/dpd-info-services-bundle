@@ -17,29 +17,30 @@ class Configuration implements ConfigurationInterface
         /** @var ArrayNodeDefinition $rootNode */
         $rootNode = $treeBuilder->getRootNode();
 
-        $rootNode
-            ->children()
-                ->scalarNode('wsdl_url')
-                    ->defaultValue('https://dpdinfoservices.dpd.com.pl/DPDInfoServicesObjEventsService/DPDInfoServicesObjEvents?wsdl')
-                    ->info('WSDL address for production or test environment')
-                ->end()
-                ->scalarNode('channel')
-                    ->isRequired()
-                    ->cannotBeEmpty()
-                    ->info('Channel (PID) assigned by DPD')
-                ->end()
-                ->scalarNode('username')
-                    ->isRequired()
-                    ->cannotBeEmpty()
-                    ->info('DPD InfoServices API login')
-                ->end()
-                ->scalarNode('password')
-                    ->isRequired()
-                    ->cannotBeEmpty()
-                    ->info('DPD InfoServices API password')
-                ->end()
-            ->end()
-        ;
+        $nodeBuilder = $rootNode->children();
+
+        $nodeBuilder
+            ->scalarNode('wsdl_url')
+                ->defaultValue('https://dpdinfoservices.dpd.com.pl/DPDInfoServicesObjEventsService/DPDInfoServicesObjEvents?wsdl')
+                ->info('WSDL address for production or test environment');
+
+        $nodeBuilder
+            ->scalarNode('channel')
+                ->isRequired()
+                ->cannotBeEmpty()
+                ->info('Channel (FID) assigned by DPD');
+
+        $nodeBuilder
+            ->scalarNode('username')
+                ->isRequired()
+                ->cannotBeEmpty()
+                ->info('DPD InfoServices API login');
+
+        $nodeBuilder
+            ->scalarNode('password')
+                ->isRequired()
+                ->cannotBeEmpty()
+                ->info('DPD InfoServices API password');
 
         return $treeBuilder;
     }
