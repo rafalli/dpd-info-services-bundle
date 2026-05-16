@@ -1,7 +1,10 @@
 # DPD InfoServices Symfony Bundle
 
-![PHP Version](https://img.shields.io/badge/PHP-8.1%2B-blue)
-![Symfony Version](https://img.shields.io/badge/Symfony-6.4%2B-black)
+[![Build Status](https://github.com/rafalli/dpd-info-services-bundle/actions/workflows/ci.yml/badge.svg)](https://github.com/rafalli/dpd-info-services-bundle/actions)
+[![Latest Stable Version](https://poser.pugx.org/rafalli/dpd-info-services-bundle/v)](https://packagist.org/packages/rafalli/dpd-info-services-bundle)
+[![Total Downloads](https://poser.pugx.org/rafalli/dpd-info-services-bundle/downloads)](https://packagist.org/packages/rafalli/dpd-info-services-bundle)
+[![License](https://poser.pugx.org/rafalli/dpd-info-services-bundle/license)](https://packagist.org/packages/rafalli/dpd-info-services-bundle)
+[![PHP Version Require](https://poser.pugx.org/rafalli/dpd-info-services-bundle/require/php)](https://packagist.org/packages/rafalli/dpd-info-services-bundle)
 
 ## Installation
 
